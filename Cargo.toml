@@ -1,0 +1,22 @@
+[package]
+name = "rand-python"
+version = "0.1.0"
+authors = ["Ronald Volgers <rvolgers@users.noreply.github.com>"]
+edition = "2018"
+license = "BSD-3-Clause"
+description = "Partial port of Python's rand module, aimed at providing identical output starting from a fixed seed as the Python version"
+keywords = ["python", "rand", "mersenne", "twister"]
+categories = ["simulation", "science"]
+
+[dev-dependencies]
+criterion = "0.3"
+
+[dependencies]
+
+[features]
+default = []
+prefetch = []  # enable use of x86 prefetch instruction
+
+[[bench]]
+name = "my_benchmark"
+harness = false
